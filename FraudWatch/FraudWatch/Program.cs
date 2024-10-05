@@ -1,7 +1,10 @@
+using FraudWatch.Application.Mappings;
 using FraudWatch_CadastroUsuarios.Infraestructure.Data.AppData;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAutoMapper(typeof(MapperProfile));
 
 // Add services to the container.
 
