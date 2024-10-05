@@ -1,4 +1,6 @@
 using FraudWatch.Application.Mappings;
+using FraudWatch.Domain.Entities;
+using FraudWatch.Infraestructure.Data.Repositories;
 using FraudWatch_CadastroUsuarios.Infraestructure.Data.AppData;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +14,10 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
 {
     options.UseOracle(builder.Configuration.GetConnectionString("Oracle"));
 });
+
+builder.Services.AddTransient<IDentistaRepository, DentistaRepository>();
+builder.Services.AddTransient<IAnalistaRepository, AnalistaRepository>();
+
 
 
 
