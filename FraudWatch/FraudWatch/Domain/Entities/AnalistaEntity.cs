@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FraudWatch.Domain.Entities;
 
-[Table("Analistas")]
+[Table("FW_Analistas")]
 public class AnalistaEntity : UsuarioEntity
 {
     [Required]

@@ -1,4 +1,7 @@
 ﻿
+using FraudWatch.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+
 namespace FraudWatch_CadastroUsuarios.Infraestructure.Data.AppData;
 
 public class ApplicationContext : DbContext

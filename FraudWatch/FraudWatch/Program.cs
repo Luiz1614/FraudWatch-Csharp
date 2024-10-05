@@ -1,6 +1,16 @@
+using FraudWatch_CadastroUsuarios.Infraestructure.Data.AppData;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<ApplicationContext>(options =>
+{
+    options.UseOracle(builder.Configuration.GetConnectionString("Oracle"));
+});
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
