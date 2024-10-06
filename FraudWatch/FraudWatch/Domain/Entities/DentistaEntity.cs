@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FraudWatch.Domain.Entities;
 
-[Table("FW_Dentistas")]
+[Table("CH_Dentistas")]
 public class DentistaEntity : UsuarioEntity
 {
     public string CRO { get; set; }

@@ -1,4 +1,6 @@
+using FraudWatch.Application.Interfaces;
 using FraudWatch.Application.Mappings;
+using FraudWatch.Application.Services;
 using FraudWatch.Domain.Entities;
 using FraudWatch.Infraestructure.Data.Repositories;
 using FraudWatch_CadastroUsuarios.Infraestructure.Data.AppData;
@@ -18,8 +20,7 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
 builder.Services.AddTransient<IDentistaRepository, DentistaRepository>();
 builder.Services.AddTransient<IAnalistaRepository, AnalistaRepository>();
 
-
-
+builder.Services.AddScoped<IDentistaApplicationService, DentistaApplicationService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

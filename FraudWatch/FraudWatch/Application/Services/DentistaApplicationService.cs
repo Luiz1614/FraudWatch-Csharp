@@ -5,13 +5,14 @@ using FraudWatch.Infraestructure.Data.Repositories;
 
 namespace FraudWatch.Application.Services;
 
+
 public class DentistaApplicationService : IDentistaApplicationService
 {
     private readonly IDentistaRepository _dentistaRepository;
 
     public DentistaApplicationService(IDentistaRepository dentistaRepository)
     {
-        _dentistaRepository=dentistaRepository;
+        _dentistaRepository = dentistaRepository;
     }
 
     public void Add(DentistaDTO dentistaDTO)
@@ -24,7 +25,7 @@ public class DentistaApplicationService : IDentistaApplicationService
             CRO = dentistaDTO.CRO
         };
 
-       _dentistaRepository.AddDentista(dentistaEntity);
+        _dentistaRepository.AddDentista(dentistaEntity);
     }
 
     public void DeleteById(int id)
