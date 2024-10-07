@@ -16,8 +16,10 @@ public class DentistaDTO
     public DateTime DataNascimento { get; set; }
 
     [Required(ErrorMessage = $"O campo {nameof(CPF)} é obrigatório.")]
+    [StringLength(11)]
     public string CPF { get; set; }
 
     [Required(ErrorMessage = $"O campo {nameof(CRO)} é obrigatório.")]
+    [StringLength(10)]
     public string CRO { get; set; }
 }

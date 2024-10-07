@@ -16,9 +16,9 @@ public class AnalistaDTO
     public DateTime DataNascimento { get; set; }
 
     [Required(ErrorMessage = $"O campo {nameof(CPF)} é obrigatório.")]
+    [StringLength(11)]
     public string CPF { get; set; }
 
     [Required(ErrorMessage = $"O campo {nameof(Departamento)} é obrigatório.")]
-
     public string Departamento { get; set; }
 }
