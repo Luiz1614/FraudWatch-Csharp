@@ -48,16 +48,14 @@ public class DentistaApplicationService : IDentistaApplicationService
         return _dentistaRepository.GetDentistaById(id);
     }
 
-    public void Update(DentistaDTO dentistaDTO)
+    public void Update(int id, DentistaDTO dentistaDTO)
     {
-        var dentistaEntity = new DentistaEntity
+        _dentistaRepository.UpdateDentistaById(id, new DentistaEntity
         {
             Nome = dentistaDTO.Nome,
             Email = dentistaDTO.Email,
             CPF = dentistaDTO.CPF,
             CRO = dentistaDTO.CRO
-        };
-
-        _dentistaRepository.UpdateDentista(dentistaEntity);
+        });
     }
 }

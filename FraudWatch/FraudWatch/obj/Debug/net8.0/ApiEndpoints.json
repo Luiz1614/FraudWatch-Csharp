@@ -1,5 +1,100 @@
 [
   {
+    "ContainingType": "FraudWatch.Presentation.Controller.AnalistaController",
+    "Method": "Get",
+    "RelativePath": "api/Analista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FraudWatch.Presentation.Controller.AnalistaController",
+    "Method": "Post",
+    "RelativePath": "api/Analista",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "analistaDTO",
+        "Type": "FraudWatch.Application.DTOs.AnalistaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FraudWatch.Presentation.Controller.AnalistaController",
+    "Method": "Get",
+    "RelativePath": "api/Analista/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FraudWatch.Presentation.Controller.AnalistaController",
+    "Method": "Put",
+    "RelativePath": "api/Analista/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "analistaDTO",
+        "Type": "FraudWatch.Application.DTOs.AnalistaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FraudWatch.Presentation.Controller.AnalistaController",
+    "Method": "Delete",
+    "RelativePath": "api/Analista/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FraudWatch.Presentation.Controller.AnalistaController",
+    "Method": "Get",
+    "RelativePath": "api/Analista/departamento/{departamento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departamento",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FraudWatch.Presentation.Controller.DentistaController",
     "Method": "Get",
     "RelativePath": "api/Dentista",
@@ -27,22 +122,6 @@
   },
   {
     "ContainingType": "FraudWatch.Presentation.Controller.DentistaController",
-    "Method": "Put",
-    "RelativePath": "api/Dentista",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dentistaDTO",
-        "Type": "FraudWatch.Application.DTOs.DentistaDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FraudWatch.Presentation.Controller.DentistaController",
     "Method": "Get",
     "RelativePath": "api/Dentista/{id}",
     "HttpMethod": "GET",
@@ -52,6 +131,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FraudWatch.Presentation.Controller.DentistaController",
+    "Method": "Put",
+    "RelativePath": "api/Dentista/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dentistaDTO",
+        "Type": "FraudWatch.Application.DTOs.DentistaDTO",
         "IsRequired": true
       }
     ],

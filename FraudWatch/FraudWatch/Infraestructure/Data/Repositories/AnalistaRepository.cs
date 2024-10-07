@@ -1,5 +1,6 @@
 ﻿using FraudWatch.Domain.Entities;
 using FraudWatch_CadastroUsuarios.Infraestructure.Data.AppData;
+using Microsoft.EntityFrameworkCore;
 
 namespace FraudWatch.Infraestructure.Data.Repositories;
 
@@ -38,9 +39,21 @@ public class AnalistaRepository : IAnalistaRepository
         return _context.Set<AnalistaEntity>().Find(id);
     }
 
-    public void UpdateAnalista(AnalistaEntity entity)
+    public void UpdateAnalistaByID(int id, AnalistaEntity entity)
     {
-        _context.Update(entity);
-        _context.SaveChanges();
+        var existingEntity = _context.Set<AnalistaEntity>().Find(id);
+
+        if (existingEntity != null)
+        {
+            existingEntity.Nome = entity.Nome;
+            existingEntity.Email = entity.Email;
+            existingEntity.CPF = entity.CPF;
+            existingEntity.DataNascimento = entity.DataNascimento;
+            existingEntity.Departamento = entity.Departamento;
+
+            _context.Entry(existingEntity).State = EntityState.Modified;
+
+            _context.SaveChanges();
+        }
     }
 }

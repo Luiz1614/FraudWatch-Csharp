@@ -21,6 +21,7 @@ builder.Services.AddTransient<IDentistaRepository, DentistaRepository>();
 builder.Services.AddTransient<IAnalistaRepository, AnalistaRepository>();
 
 builder.Services.AddScoped<IDentistaApplicationService, DentistaApplicationService>();
+builder.Services.AddScoped<IAnalistaApplicationService, AnalistaApplicationService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

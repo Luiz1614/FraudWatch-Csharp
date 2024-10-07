@@ -6,13 +6,13 @@ namespace FraudWatch.Presentation.Controller;
 
 [ApiController]
 [Route("api/[controller]")]
-public class DentistaController : ControllerBase
+public class AnalistaController : ControllerBase
 {
-    private readonly IDentistaApplicationService _dentistaApplicationService;
+    private readonly IAnalistaApplicationService _analistaApplicationService;
 
-    public DentistaController(IDentistaApplicationService dentistaApplicationService)
+    public AnalistaController(IAnalistaApplicationService analistaApplicationService)
     {
-        _dentistaApplicationService=dentistaApplicationService;
+        _analistaApplicationService=analistaApplicationService;
     }
 
     [HttpGet]
@@ -20,7 +20,7 @@ public class DentistaController : ControllerBase
     {
         try
         {
-            var clientes = _dentistaApplicationService.GetAll();
+            var clientes = _analistaApplicationService.GetAll();
 
             if (clientes == null)
                 return NoContent();
@@ -38,7 +38,7 @@ public class DentistaController : ControllerBase
     {
         try
         {
-            var cliente = _dentistaApplicationService.GetById(id);
+            var cliente = _analistaApplicationService.GetById(id);
 
             if (cliente == null)
                 return NotFound();
@@ -51,12 +51,12 @@ public class DentistaController : ControllerBase
         }
     }
 
-    [HttpGet("cro/{cro}")]
-    public IActionResult Get(string cro)
+    [HttpGet("departamento/{departamento}")]
+    public IActionResult Get(string departamento)
     {
         try
         {
-            var cliente = _dentistaApplicationService.GetByCro(cro);
+            var cliente = _analistaApplicationService.GetByDepartamento(departamento);
 
             if (cliente == null)
                 return NotFound();
@@ -70,11 +70,11 @@ public class DentistaController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Post([FromBody] DentistaDTO dentistaDTO)
+    public IActionResult Post([FromBody] AnalistaDTO analistaDTO)
     {
         try
         {
-            _dentistaApplicationService.Add(dentistaDTO);
+            _analistaApplicationService.Add(analistaDTO);
             return Ok();
         }
         catch (Exception ex)
@@ -84,11 +84,11 @@ public class DentistaController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public IActionResult Put(int id, [FromBody] DentistaDTO dentistaDTO)
+    public IActionResult Put(int id, [FromBody] AnalistaDTO analistaDTO)
     {
         try
         {
-            _dentistaApplicationService.Update(id, dentistaDTO);
+            _analistaApplicationService.Update(id, analistaDTO);
             return Ok();
         }
         catch (Exception ex)
@@ -102,7 +102,7 @@ public class DentistaController : ControllerBase
     {
         try
         {
-            _dentistaApplicationService.DeleteById(id);
+            _analistaApplicationService.DeleteById(id);
             return Ok();
         }
         catch (Exception ex)
@@ -110,6 +110,5 @@ public class DentistaController : ControllerBase
             return BadRequest(ex.Message);
         }
     }
+
 }
-
-

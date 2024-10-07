@@ -8,6 +8,6 @@ public interface IAnalistaRepository
     AnalistaEntity GetAnalistaById(int id);
     AnalistaEntity GetAnalistaByDepartamento(string departamento);
     void AddAnalista(AnalistaEntity entity);
-    void UpdateAnalista(AnalistaEntity entity);
+    void UpdateAnalistaByID(int id, AnalistaEntity entity);
     void DeleteAnalistaById(int id);
 }

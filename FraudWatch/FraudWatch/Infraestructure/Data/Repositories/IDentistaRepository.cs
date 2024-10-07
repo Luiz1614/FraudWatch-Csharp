@@ -8,6 +8,6 @@ public interface IDentistaRepository
     DentistaEntity GetDentistaById(int id);
     DentistaEntity GetDentistaByCro(string cro);
     void AddDentista(DentistaEntity entity);
-    void UpdateDentista(DentistaEntity entity);
+    void UpdateDentistaById(int id, DentistaEntity entity);
     void DeleteDentistaById(int id);
 }
