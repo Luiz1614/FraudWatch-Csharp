@@ -6,6 +6,10 @@ FraudWatch é uma aplicação para realizar o gerenciamento de dentistas e anali
 ## Objetivo
 Gerenciar dados de dentistas e analistas.
 
+## Requisitos
+- **Funcionais**: Operações de Cadastro, leitura, atualização e remoção de dados.
+- **Não Funcionais**: Arquitetura limpa, desempenho, segurança.
+
 ## Arquitetura (Clean Architecture)
 - **Apresentação**: APIs REST para gerenciar dentistas e analistas, além da interação com a equipe de análise.
 - **Aplicação**: Serviços que implementam as operações CRUD e lógica de negócios.
