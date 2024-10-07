@@ -13,7 +13,7 @@ Gerenciar dados de dentistas e analistas.
 - **Infraestrutura**: Repositórios e persistência de dados com Entity Framework.
 
 ## Tecnologias
-- C#, ASP.NET Core, Entity Framework Core, SQL Server, Swagger.
+- C#, ASP.NET Core, Entity Framework Core, Oracle SQL, Swagger.
 
 ## Configuração
 1. Clone o repositório: `git clone https://github.com/Luiz1614/FraudWatch-Csharp.git`
