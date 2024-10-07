@@ -24,3 +24,9 @@ Gerenciar dados de dentistas e analistas.
 2. Configure a string de conexão no `appsettings.json`.
 3. Execute as migrações: `dotnet ef database update`
 4. Inicie a aplicação: `dotnet run`
+
+## Integrantes
+
+- Luiz: RM553542 - 2tdspR
+- Mauricio: RM553748 - 2tdspC
+- Yago: RM553013 - 2tdspC
