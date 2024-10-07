@@ -21,7 +21,12 @@ public class AnalistaRepository : IAnalistaRepository
 
     public void DeleteAnalistaById(int id)
     {
-        _context.Remove(GetAnalistaById(id));
+        var entity = _context.Set<AnalistaEntity>().Find(id);
+        if (entity != null)
+        {
+            _context.Remove(entity);
+            _context.SaveChanges();
+        }
     }
 
     public IEnumerable<AnalistaEntity> GetAllAnalistas()
